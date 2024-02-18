@@ -1,0 +1,33 @@
+As principais diferenças entre uma coluna calculada e uma medida no DAX são:
+
+Contexto de Avaliação:
+
+Coluna Calculada: O valor de uma coluna calculada é calculado durante a atualização de dados e utiliza a linha
+atual como contexto. O resultado não depende da interação do usuário no relatório.
+Medida: Uma medida opera em agregações de dados definidas pelo contexto atual de avaliação. Em uma matriz ou
+tabela dinâmica, por exemplo, os dados são agregados e calculados de acordo com os filtros aplicados pelo
+usuário.
+
+
+Armazenamento e Cálculo:
+
+Coluna Calculada: As colunas calculadas são calculadas durante o processamento do banco de dados e armazenadas
+no modelo, ocupando espaço na memória.
+Medida: As medidas são avaliadas no momento da consulta e não ocupam espaço em disco, sendo calculadas
+dinamicamente com base no contexto de avaliação.
+
+
+Utilização:
+
+Coluna Calculada: São úteis para cálculos que dependem estritamente da linha atual, como operações matemáticas
+simples ou categorizações.
+Medida: São ideais para exibir valores calculados que reflitam seleções do usuário, como porcentagens, totais
+agregados, ou cálculos mais complexos.
+
+
+Escopo:
+
+Coluna Calculada: O escopo de uma coluna calculada está limitado à tabela em que foi criada, não podendo ser
+usada em outras partes do modelo.
+Medida: Uma medida pode ser definida em uma tabela, mas não pertence realmente a ela, podendo ser movida para
+outras tabelas sem perder sua funcionalidade.
